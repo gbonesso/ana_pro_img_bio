@@ -19,8 +19,8 @@ https://numpy.org/doc/stable/user/numpy-for-matlab-users.html
     a. help()
     b. help(plt)
 """
-help()
-help(plt)
+#help()
+#help(plt)
 
 """
 2. # Operadores aritméticos
@@ -52,6 +52,7 @@ help(plt)
     i. #Factorial, $n!$
         np.math.factorial(4)
 """
+print("2. # Operadores aritméticos\n\n")
 a=3; b=1
 print(a + b)
 print(np.add(a,b))
