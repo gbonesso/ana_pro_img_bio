@@ -4,26 +4,45 @@ import cv2 # OpenCV
 import skimage
 import skimage.exposure
 
+"""
+6. (Ler Imagens) No Editor use a função “imread” para fazer a leitura dessas
+imagens, atribuindo seus valores a duas matrizes i0.
+"""
 i0 = cv2.imread('lab01/raioXTorax.pgm', 0) # Gray
 
 """
-(Normalizar Intensidades) No Editor implemente a normalização abaixo para
+7. (Normalizar Intensidades) No Editor implemente a normalização abaixo para
 a matriz de imagem ficar normalizada entre 0 e 1 com resolução de
-intensidade ‘float’ .
-Ex.:
-
+intensidade ‘float’.
 # Convert to normalized floating point como se fosse im2double do
 MatLab.
 """
-
 in0 = skimage.img_as_float(i0)
 
+"""
+8. Dado que uma imagem pode ser representada por uma matriz com M
+linhas e N colunas, use a função “np.shape” para encontrar o valor M e N da
+imagem representada pela matriz in0.
+"""
 (M,N) = np.shape(in0)
-
 print('Tamanho da imagem: ', M, 'x', N) # M -> linhas, N -> colunas
 
+"""
+9. Pelo Console, identifique o valor do pixel na posição in0[50,50]? Confira este
+valor no Explorador de Variáveis.
+"""
 print('Intensidade do pixel (50,50): ', in0[50,50]) # Intensidade do pixel (50,50)
 
+"""
+10. Para a imagem normalizadas in0, identifique e armazene os valores abaixo.
+maximo = np.max(in0)
+minimo = np.min(in0)
+media = np.mean(in0)
+dP = np.std(in0)
+Obs.: operações e/ou funções da biblioteca → import numpy as np
+Verificar Outras operações e funções no endereço
+http://mathesaurus.sourceforge.net/matlab-numpy.html 
+"""
 maximo = np.max(in0)
 minimo = np.min(in0)
 media = np.mean(in0)
@@ -42,11 +61,25 @@ Ibnario1 = in0>0.8
 Explique em comentário no código o que aconteceu? Para qual tipo a
 imagem se transformou, etc.
 """
-
 Ibnario1 = in0>0.2 # A imagem se transformou em uma imagem binária, onde os pixels com intensidade maior que 0.2 são definidos como True (1) e os pixels com intensidade menor ou igual a 0.2 são definidos como False (0).
 Ibnario2 = in0>0.5 # A imagem se transformou em uma imagem binária, onde os pixels com intensidade maior que 0.5 são definidos como True (1) e os pixels com intensidade menor ou igual a 0.5 são definidos como False (0).
 Ibnario3 = in0>0.8 # A imagem se transformou em uma imagem binária, onde os pixels com intensidade maior que 0.8 são definidos como True (1) e os pixels com intensidade menor ou igual a 0.8 são definidos como False (0).
 
+"""
+11.→ Use as funções abaixo para exibir a imagem In0.
+# Exibe Imagens
+
+plt.figure
+plt.ylabel('linhas - M')
+plt.xlabel('colunas - N')
+plt.title('image0')
+plt.imshow(in0, cmap='gray') #--> Colormaps alternativo, verificar outros→
+cmap='jet'
+plt.colorbar()
+
+Na janela Figuras, verifique se o tamanho da imagem condiz com o
+encontrado anteriormente?
+"""
 # Exibe as 4 imagens ao final
 plt.figure(figsize=(10, 8))
 

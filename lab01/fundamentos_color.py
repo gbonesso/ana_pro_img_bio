@@ -8,13 +8,17 @@ i0 = cv2.imread('lab01/Lamina-biopsia.jpg', 1) # 1->Color
 i0 = cv2.cvtColor(i0, cv2.COLOR_BGR2RGB)
 
 """
-(Normalizar Intensidades) No Editor implemente a normalização abaixo para
-a matriz de imagem ficar normalizada entre 0 e 1 com resolução de
-intensidade ‘float’ .
-Ex.:
+13.Refazer as questões usando a imagem colorida, com as 3 dimensões In1 ou
+In1[:,:,:].
+a. i1 = cv2.imread(' Lamina-biopsia.jpg', 1) # Color In1
+b. Verifique qual o tamanho desta imagem? Quantas dimensões?
+c. Trabalhar / exibir também uma banda de cada vez. In1[:,:,0], In1 [:,:,1],
+In1 [:,:,2]. Indique em quais posições estão ás bandas RGB para o Open
+CV?
 
-# Convert to normalized floating point como se fosse im2double do
-MatLab.
+Para mais Informações exclusivamente sobre Python
+https://www.youtube.com/watch?v=lJjR906426o&list=PLfCKf0-awunOu2WyLe2pSD2fXUo795xRe
+https://www.youtube.com/watch?v=S9uPNppGsGo&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0
 """
 
 in0 = skimage.img_as_float(i0)
