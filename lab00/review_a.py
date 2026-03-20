@@ -152,3 +152,45 @@ print('Matriz Array convertida para float: ', matArrayFloat) # Matriz Array conv
 print('Matriz Array convertida para string: ', matArrayString) # Matriz Array convertida para string:  [['1' '2' '3']
 #  ['4' '5' '6']
 #  ['7' '8' '9']]   
+
+"""
+12. Loops
+    a. for
+        i. Usando o vetor da questão acima faça um loop for para
+        imprimir os números de forma sequencial.
+    b. while
+        i. Usando o vetor da questão acima faça um loop while
+        para imprimir os números de forma sequencial
+        decrescente de 10 a 0.
+"""
+for num in vetor:
+    print(num)
+
+i = 10
+while i >= 0:
+    print("i: ", i)
+    i -= 1
+
+"""
+13. Entrada de dados externos
+    a. Input→ use a função input para armazenar a idade do
+    usuário.
+"""
+idade = input("Digite sua idade: ")
+print("Sua idade é: ", idade)
+
+"""
+14. Condicional
+    a. Faça um condicional para indicar e imprimir se o usuário é
+    maior ou menor de idade.
+"""
+if int(idade) >= 18:
+    print("Você é maior de idade.")
+else:
+    print("Você é menor de idade.")
+
+"""
+15. Para Casa: Instalar Anaconda e Spyder no computador pessoal em casa, e
+repita o processo acima e explore novas possibilidades.
+https://www.youtube.com/watch?v=d9vCbERxUYM
+"""
